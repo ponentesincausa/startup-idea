@@ -33,11 +33,11 @@
 
 			var decoded0 = $('<div/>').html(data.titles[0].logo).text();
 			var decoded1 = $('<div/>').html(data.titles[1].logo).text();
-			
+
 			$('.logos .cell:eq(0)')
 				.css('background',data.titles[0].color)
 				.find('.double').html(decoded0 + '<a class="name" href="'+ data.titles[0].url +'" target="_blank"><div>'+data.titles[0].name+'</div></a>')
-			
+
 			$('.logos .cell:eq(1)')
 				.css('background',data.titles[1].color)
 				.find('.double').html(decoded1 + '<a class="name" href="'+ data.titles[1].url +'" target="_blank"><div>'+data.titles[1].name+'</div></a>')
@@ -65,6 +65,6 @@
 	<div class="cell"><div class="amp">+</div></div>
 </div>
 <div class="footer">
-	<span class="desktop">Hit the [SPACE] to get your next startup idea.</span> Made by @<a href="https://twitter.com/stSilent" target="_blank">Vladimir</a> and @<a href="https://twitter.com/monstercritic" target="_blank">Sergey</a>. 
+	<span class="desktop">Hit the [SPACE] to get your next startup idea.</span> Made by @<a href="https://twitter.com/stSilent" target="_blank">Vladimir</a> and @<a href="https://twitter.com/monstercritic" target="_blank">Sergey</a>.
 </div>
 </div>
