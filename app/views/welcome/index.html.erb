@@ -1,4 +1,6 @@
 <script>
+
+	// for touch and mouseup fire askNewStartup()
 	$(document).bind("touchend mouseup",function (e) {
 	    var container = $(".name");
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -6,6 +8,7 @@
 	    }
 	});
 
+	// for spacebar fire askNewStartup()
 	$(window).keypress(function(e) {
 
 	  if (e.keyCode == 0 || e.keyCode == 32) {
@@ -14,6 +17,7 @@
 
 	});
 
+	// fire getNewStartups
 	function askNewStartup(){
 		if (!$('body').hasClass('wait')){
 		    $('body').addClass('fadeOut').addClass('wait');
@@ -33,6 +37,7 @@
 
 			var decoded0 = $('<div/>').html(data.titles[0].logo).text();
 			var decoded1 = $('<div/>').html(data.titles[1].logo).text();
+			var decoded2 = $('<div/>').html(data.titles[2].logo).text();
 
 			$('.logos .cell:eq(0)')
 				.css('background',data.titles[0].color)
@@ -41,6 +46,10 @@
 			$('.logos .cell:eq(1)')
 				.css('background',data.titles[1].color)
 				.find('.double').html(decoded1 + '<a class="name" href="'+ data.titles[1].url +'" target="_blank"><div>'+data.titles[1].name+'</div></a>')
+
+			$('.logos .cell:eq(2)')
+				.css('background',data.titles[2].color)
+				.find('.double').html(decoded2 + '<a class="name" href="'+ data.titles[2].url +'" target="_blank"><div>'+data.titles[2].name+'</div></a>')
 
 			$('.logos svg *').attr('fill','#fff');
 
@@ -60,6 +69,9 @@
 		</div>
 	</div>
 	<% end %>
+</div>
+<div class="table plus">
+	<div class="cell"><div class="amp">+</div></div>
 </div>
 <div class="table plus">
 	<div class="cell"><div class="amp">+</div></div>
