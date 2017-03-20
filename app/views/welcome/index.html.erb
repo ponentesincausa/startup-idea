@@ -57,6 +57,9 @@
 				$('body').removeClass('wait');
 			},500)
 	   	})
+			.fail(function(err) {
+    console.log( "uh oh", err );
+  })
 	}
 </script>
 
@@ -70,13 +73,13 @@
 	</div>
 	<% end %>
 </div>
-<div class="table plus">
+<!-- <div class="table plus">
 	<div class="cell"><div class="amp">+</div></div>
 </div>
 <div class="table plus">
 	<div class="cell"><div class="amp">+</div></div>
-</div>
+</div> -->
 <div class="footer">
-	<span class="desktop">Hit the [SPACE] to get your next startup idea.</span> Made by @<a href="https://twitter.com/stSilent" target="_blank">Vladimir</a> and @<a href="https://twitter.com/monstercritic" target="_blank">Sergey</a>.
+	<span class="desktop">Presiona [ESPACIO] para conseguir su siguiente idea de emprendimiento.</span> Hecho por @<a href="https://twitter.com/stSilent" target="_blank">Vladimir</a> and @<a href="https://twitter.com/monstercritic" target="_blank">Sergey</a>. Modificado por @<a href="https://twitter.com/basicavisual" target="_blank">Ali</a>.
 </div>
 </div>
