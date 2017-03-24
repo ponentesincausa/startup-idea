@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  resources :problems
+  resources :trends
+  resources :goods
   devise_for :users
   devise_for :admins
   get 'titles/random'
+  get 'problems/random'
+  get 'goods/random'
+  get 'trends/random'
 
+  resources :problems
+  resources :goods
+  resources :trends
   resources :titles
   get 'welcome/index'
 

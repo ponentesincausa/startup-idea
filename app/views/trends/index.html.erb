@@ -1,0 +1,34 @@
+<br>
+<%= link_to 'New Trend', new_trend_path %> -
+<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+<br>
+<br>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trends</h1>
+
+<table class="titles">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Color</th>
+      <th>Logo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trends.each do |trend| %>
+      <tr>
+        <td><a href="<%= trend.url %>"><%= trend.name %></a></td>
+        <td class="logotype" style="background:<%= trend.color %>"><%= trend.logo.html_safe %></td>
+        <td><%= link_to 'Show', trend %> | <%= link_to 'Edit', edit_trend_path(trend) %> | <%= link_to 'Destroy', trend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trend', new_trend_path %>

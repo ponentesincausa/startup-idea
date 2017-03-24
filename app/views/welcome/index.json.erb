@@ -1,7 +1,7 @@
 {"titles":[
 	<% @titles.each_with_index do |title,index| %>
 		<% prefix = ',' %>
-		<% if index==2 
+		<% if index==1
 			prefix = ''
 		end %>
 		{
@@ -10,5 +10,29 @@
 		"color": "<%= title.color %>",
 		"logo": "<%= title.logo %>"
 		}<%= prefix %>
+	<% end %>
+	<% @trends.each_with_index do |trend,index| %>
+		<% prefix = ',' %>
+		<% if index==1
+			prefix = ''
+		end %>
+		{
+		"name": "<%= trend.name %>",
+		"url": "<%= trend.url %>",
+		"color": "<%= trend.color %>",
+		"logo": "<%= trend.logo %>"
+		}<%= prefix %>
+	<% end %>
+	<% @problems.each_with_index do |problem,index| %>
+		<% prefix = ',' %>
+		<% if index==1
+			prefix = ''
+		end %>
+		{
+		"name": "<%= problem.name %>",
+		"url": "<%= problem.url %>",
+		"color": "<%= problem.color %>",
+		"logo": "<%= problem.logo %>"
+		}
 	<% end %>
 ]}

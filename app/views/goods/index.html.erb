@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Goods</h1>
+
+<table class="titles">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Color</th>
+      <th>Logo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goods.each do |good| %>
+      <tr>
+        <td><a href="<%= good.url %>"><%= good.name %></a></td>
+        <td class="logotype" style="background:<%= good.color %>"><%= good.logo.html_safe %></td>
+        <td><%= link_to 'Show', good %> | <%= link_to 'Edit', edit_good_path(good) %> | <%= link_to 'Destroy', good, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Good', new_good_path %>

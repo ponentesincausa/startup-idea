@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @good.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @good.url %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @good.color %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @good.logo.html_safe %>
+</p>
+
+<%= link_to 'Edit', edit_good_path(@good) %> |
+<%= link_to 'Back', goods_path %>

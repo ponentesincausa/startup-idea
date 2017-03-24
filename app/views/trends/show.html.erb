@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trend.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @trend.url %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @trend.color %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @trend.logo.html_safe  %>
+</p>
+
+<%= link_to 'Edit', edit_trend_path(@trend) %> |
+<%= link_to 'Back', trends_path %>
