@@ -41,15 +41,15 @@
 
 			$('.logos .cell:eq(0)')
 				.css('background',data.titles[0].color)
-				.find('.double').html(decoded0 + '<a class="name" href="'+ data.titles[0].url +'" target="_blank"><div>'+data.titles[0].name+'</div></a>')
+				.find('.double').html(decoded0 + '<a class="name" href="'+ data.titles[0].url +'" target="_blank"><div>'+data.trends[0].name+'</div></a>')
 
-			$('.logos .cell:eq(0)')
-				.css('background',data.trends[0].color)
-				.find('.double').html(decoded1 + '<a class="name" href="'+ data.trends[0].url +'" target="_blank"><div>'+data.trends[0].name+'</div></a>')
+			$('.logos .cell:eq(1)')
+				.css('background',data.trends[1].color)
+				.find('.double').html(decoded1 + '<a class="name" href="'+ data.trends[1].url +'" target="_blank"><div>'+data.trends[1].name+'</div></a>')
 
-			$('.logos .cell:eq(0)')
-				.css('background',data.problems[0].color)
-				.find('.double').html(decoded2 + '<a class="name" href="'+ data.problems[0].url +'" target="_blank"><div>'+data.problems[0].name+'</div></a>')
+			$('.logos .cell:eq(2)')
+				.css('background',data.problems[2].color)
+				.find('.double').html(decoded2 + '<a class="name" href="'+ data.problems[2].url +'" target="_blank"><div>'+data.problems[2].name+'</div></a>')
 
 			$('.logos svg *').attr('fill','#fff');
 
